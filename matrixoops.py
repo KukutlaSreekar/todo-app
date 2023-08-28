@@ -42,8 +42,8 @@ class Matrix(values):
     @property
     def matrix_construct(self):
         matrix_1 = []
-        for key, value in values.items():
-            x = values[key]
+        for key, value in self.values.items():
+            x = self.values[key]
             x = x.split(",")
             x = [int(element) for element in x]
             matrix_1.append(x)
@@ -51,8 +51,6 @@ class Matrix(values):
 
 
 class UserInput(values):
-    def __init__(self):
-        self.values = values
 
     def row1(self):
         Input_row1 = sg.InputText(tooltip="Enter the first row of the matrix as x, y, z", key="row1")
