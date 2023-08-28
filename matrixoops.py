@@ -1,8 +1,8 @@
 import PySimpleGUI as sg
 
 
-class Matrix(values):
-    def __init__(self):
+class Matrix():
+    def __init__(self, values):
         self.values = values
         self.m_1_row1, self.m_1_row2, self.m_1_row3 = self.matrix_construct
 
@@ -50,7 +50,7 @@ class Matrix(values):
         return matrix_1
 
 
-class UserInput(values):
+class UserInput():
 
     def row1(self):
         Input_row1 = sg.InputText(tooltip="Enter the first row of the matrix as x, y, z", key="row1")
