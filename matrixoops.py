@@ -15,7 +15,7 @@ class Matrix():
         self.mm_1_row2_2_ = -((self.m_1_row1[0] * self.m_1_row3[1]) - (self.m_1_row1[1] * self.m_1_row3[0]))
         self.mm_1_row3_0_ = +((self.m_1_row1[1] * self.m_1_row2[2]) - (self.m_1_row1[2] * self.m_1_row2[1]))
         self.mm_1_row3_1_ = -((self.m_1_row1[0] * self.m_1_row2[2]) - (self.m_1_row1[2] * self.m_1_row2[0]))
-        self.mm_1_row3_2_ = +((self.m_1_row1[0] * self.m_1_row2[1]) - (self.m_1_row1[1] * mself._1_row2[0]))
+        self.mm_1_row3_2_ = +((self.m_1_row1[0] * self.m_1_row2[1]) - (self.m_1_row1[1] * self.m_1_row2[0]))
 
     def determinant(self):
         det = self.m_1_row1[0] * (self.m_1_row2[1] * self.m_1_row3[2] - self.m_1_row2[2] * self.m_1_row3[1]) \
@@ -25,19 +25,19 @@ class Matrix():
 
     def cofactor(self):
 
-        content = f"""[   {self.mm_1_row1_0_} , {self.mm_1_row1_1_} , {self.mm_1_row1_2_}   ] 
-                      |   {self.mm_1_row2_0_} , {self.mm_1_row2_1_} , {self.mm_1_row2_2_}   | 
-                      [   {self.mm_1_row3_0_} , {self.mm_1_row3_1_} , {self.mm_1_row3_2_}   ]"""
+        cofactor = f"""[   {self.mm_1_row1_0_} , {self.mm_1_row1_1_} , {self.mm_1_row1_2_}   ] 
+|   {self.mm_1_row2_0_} , {self.mm_1_row2_1_} , {self.mm_1_row2_2_}   | 
+[   {self.mm_1_row3_0_} , {self.mm_1_row3_1_} , {self.mm_1_row3_2_}   ]"""
 
-        return content
+        return cofactor
 
     def adjoint(self):
 
-        content = f"""[   {self.mm_1_row1_0_} , {self.mm_1_row2_0_} , {self.mm_1_row3_0_}   ] 
-                      |   {self.mm_1_row1_1_} , {self.mm_1_row2_1_} , {self.mm_1_row3_1_}   | 
-                      [   {self.mm_1_row1_2_} , {self.mm_1_row2_2_} , {self.mm_1_row3_2_}   ]"""
+        adjoint = f"""[   {self.mm_1_row1_0_} , {self.mm_1_row2_0_} , {self.mm_1_row3_0_}   ] 
+|   {self.mm_1_row1_1_} ,  {self.mm_1_row2_1_} , {self.mm_1_row3_1_}   | 
+[   {self.mm_1_row1_2_} , {self.mm_1_row2_2_} , {self.mm_1_row3_2_}   ]"""
 
-        return content
+        return adjoint
 
     @property
     def matrix_construct(self):
